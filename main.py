@@ -47,17 +47,21 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         groups_col.update_one({"_id": chat.id}, {"$set": {"title": chat.title}}, upsert=True)
 
     keyboard = [
-        [InlineKeyboardButton("📢 Channel", url=CHANNEL_URL)],
-        [InlineKeyboardButton("💬 Support Group", url=SUPPORT_GROUP_URL)],
-        [InlineKeyboardButton("ℹ️ Help", callback_data="help")]
+        [InlineKeyboardButton("📢 𝐂ʜᴀɴɴᴇʟ", url=CHANNEL_URL)],
+        [InlineKeyboardButton("💬 𝐒ᴜᴘᴘᴏʀᴛ 𝐆ʀᴏᴜᴘ", url=SUPPORT_GROUP_URL)],
+        [InlineKeyboardButton("ℹ️ 𝐇ᴇʟᴘ", callback_data="help")]
     ]
 
     text = (
-        "✨ <b>Welcome to Edit Guardian Bot</b> ✨\n\n"
-        "🔹 This bot automatically <b>deletes edited messages</b> in groups.\n"
-        "🔹 Helps maintain transparency in conversations.\n\n"
-        "✅ Add me in your group & give <b>Delete Messages</b> permission."
-    )
+        " <b>ʜᴇʏ {0} 🥀,</b>"
+        "✨ <b>Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴇᴅɪᴛ ɢᴜʀᴅɪᴀɴ ʙᴏᴛ </b> ✨\n\n"
+        "🔹 <b>ᴛʜɪs ʙᴏᴛ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇs ᴇᴅɪᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ ɢʀᴏᴜᴘs.</b>\n"
+        "🔹 <b>ʜᴇʟᴘs ᴍᴀɪɴᴛᴀɪɴ ᴛʀᴀɴsᴘᴀʀᴇɴᴄʏ ɪɴ ᴄᴏɴᴠᴇʀsᴀᴛɪᴏɴ.</b>\n\n"
+        "<blockquote> ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ & ɢɪᴠᴇ Dᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇ ᴘᴇʀᴍɪssɪᴏɴ.</blockquote>\n\n"
+        "ᴍᴀᴅᴇ ʙʏ ↣ [𓂃❛ 𝐙 𝛆 ʀ 𝛂 ƚ 𝐡 𝚘 δ](https://t.me/Og_Zerathos) ♡"
+
+
+
 
     await update.message.reply_html(text, reply_markup=InlineKeyboardMarkup(keyboard))
 
@@ -85,7 +89,7 @@ async def edited_message_handler(update: Update, context: ContextTypes.DEFAULT_T
 
     try:
         await message.delete()
-        warn_text = f"⚠️ {mention_html(user.id, user.first_name)}, you edited a message so it was deleted."
+        warn_text = f"⚠️ {mention_html(user.id, user.first_name)} ʏᴏᴜ ᴇᴅɪᴛᴇᴅ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ᴀɴᴅ ɪ ᴅᴇʟᴇᴛᴇᴅ ɪᴛ 🤡."
         await chat.send_message(warn_text, parse_mode="HTML")
     except Exception as e:
         logger.error(f"Failed to delete edited message: {e}")
