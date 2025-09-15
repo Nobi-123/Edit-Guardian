@@ -53,13 +53,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     text = (
-        " <b>ʜᴇʏ {0} 🥀,</b>"
+        " <b>ʜᴇʏ sᴡᴇᴇᴛʏ 🥀,</b>"
         "✨ <b>Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴇᴅɪᴛ ɢᴜʀᴅɪᴀɴ ʙᴏᴛ </b> ✨\n\n"
         "🔹 <b>ᴛʜɪs ʙᴏᴛ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇs ᴇᴅɪᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ ɢʀᴏᴜᴘs.</b>\n"
         "🔹 <b>ʜᴇʟᴘs ᴍᴀɪɴᴛᴀɪɴ ᴛʀᴀɴsᴘᴀʀᴇɴᴄʏ ɪɴ ᴄᴏɴᴠᴇʀsᴀᴛɪᴏɴ.</b>\n\n"
-        "<blockquote> ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ & ɢɪᴠᴇ Dᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇ ᴘᴇʀᴍɪssɪᴏɴ.</blockquote>\n\n"
-        "ᴍᴀᴅᴇ ʙʏ ↣ [𓂃❛ 𝐙 𝛆 ʀ 𝛂 ƚ 𝐡 𝚘 δ](https://t.me/Og_Zerathos) ♡"
-    )
+        "<b><blockquote> ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ & ɢɪᴠᴇ Dᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇ ᴘᴇʀᴍɪssɪᴏɴ.</blockquote></b>\n\n"
+        "ᴍᴀᴅᴇ ʙʏ ↣ <a href ='https://t.me/Og_Zerathos'>𓂃❛ 𝐙 𝛆 ʀ 𝛂 ƚ 𝐡 𝚘 δ ♡</a>")
 
     
 
